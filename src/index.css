@@ -19,9 +19,11 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  box-sizing: border-box;
   display: flex;
   place-items: center;
+  margin: 0;
+  background: #212534;
   min-width: 320px;
   min-height: 100vh;
 }
