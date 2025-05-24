@@ -7,3 +7,15 @@
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 999;
 }
+
+.head {
+  margin-top: 96px;
+  scroll-margin-top: 48px;
+  text-align: left;
+  /* margin-left: 24px; */
+  font-size: 28px;
+  background: linear-gradient(180deg, #7a6cf4 42.79%, #646cff 74.04%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

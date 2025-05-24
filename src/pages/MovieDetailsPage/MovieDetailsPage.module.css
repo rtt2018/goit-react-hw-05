@@ -1,3 +1,193 @@
 .container {
-  /* styles for MovieDetailsPage */
+  display: flex;
+  margin-top: 96px;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 400px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+.card {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  font-family: cursive;
+  color: rgb(88 199 250 / 100%);
+}
+
+.card:hover {
+  color: rgb(88 199 250 / 0%);
+  transition: color 1s;
+}
+
+.card:hover:before,
+.card:hover:after {
+  opacity: 1;
+}
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+}
+
+.thumb img {
+  width: 100%;
+  height: auto;
+}
+
+.filmInfo {
+  display: flex;
+  gap: 48px;
+}
+
+.filmDescription {
+  width: 877px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.head {
+  margin: 0;
+  scroll-margin-top: 48px;
+  text-align: left;
+  /* margin-left: 24px; */
+  font-size: 28px;
+  background: linear-gradient(180deg, #7a6cf4 42.79%, #646cff 74.04%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.filmTitle {
+  margin: 0 0 16px;
+  font-size: 36px;
+  background: linear-gradient(180deg, #7a6cf4 42.79%, #646cff 74.04%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(203, 156, 241);
+  text-shadow: 0 0 5px rgb(91, 130, 214), 0 0 1px rgb(176, 101, 219);
+}
+
+.tagLine {
+  margin: 24px 0 8px;
+  font-size: 18px;
+  color: #8c66c5;
+  font-weight: bold;
+}
+
+.overview {
+  margin: 0 0 24px;
+  font-size: 18px;
+  color: #731af8;
+  font-style: italic;
+}
+
+.link {
+  margin: 20px 0;
+}
+
+.linkActive {
+  margin: 20px 0;
+  color: #646cff;
+  text-shadow: 0 0 18px #e9ff00;
+  -webkit-text-stroke: 1px rgb(109, 27, 177);
+}
+
+.linkContainer {
+  display: flex;
+  gap: 32px;
+}
+
+.backLink {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  width: 125px;
+  transition: text-shadow 0.2s ease-in, -webkit-text-stroke 0.3s ease-in;
+}
+
+.backLinkSvg {
+  height: 36px;
+  width: 20px;
+}
+
+.backLink:hover {
+  text-shadow: 0 0 18px #b88cd6;
+  -webkit-text-stroke: 1px rgb(109, 27, 177);
+}
+
+.backLink:hover .backLinkSvg {
+  fill: rgb(109, 27, 177);
 }

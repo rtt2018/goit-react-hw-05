@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import { Routes, Route } from "react-router-dom";
+import Navigation from './components/Navigation/Navigation';
 import HomePage from './pages/HomePage/HomePage';
 import MoviesPage from './pages/MoviesPage/MoviesPage';
 import MovieDetailsPage from './pages/MovieDetailsPage/MovieDetailsPage';
@@ -9,11 +9,10 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import './App.css'
 
 function App() {
-  // const KEY = import.meta.env.VITE_REACT_API_KEY;
-
 
   return (
     <>
+      <Navigation />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />

@@ -1,3 +1,89 @@
 .container {
-  /* styles for MoviesPage */
+  position: fixed;
+  z-index: 9999;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.searchForm {
+  display: flex;
+  height: 32px;
+  box-shadow: 0 0 18px #b88cd6;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.searchField {
+  box-sizing: border-box;
+  width: 300px;
+  border-radius: 8px;
+  border: solid 2px #b88cd6;
+  background-color: #c3bac9;
+  padding: 4px 42px 4px 8px;
+  color: #5a0b8f;
+}
+
+.searchForm:focus-visible,
+.searchField:focus-visible {
+  outline: none;
+  box-shadow: 0 0 18px #802cb8;
+}
+
+.searchButton {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  transition: transform 0.3s ease-in;
+}
+
+.findIcon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  color: rgb(79, 17, 138);
+}
+
+.filmWrapper {
+  margin-top: 96px;
+}
+
+.LoadMoreBtn {
+  height: 40px;
+  background-color: rgb(128, 27, 187);
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #646cff;
+  -webkit-text-stroke: 1px rgb(139, 138, 189);
+  border-radius: 8px;
+  padding: 8px 16px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  margin: 32px 0;
+  transition: 0.3s ease-in;
+  transition-property: box-shadow, color;
+}
+
+.LoadMoreBtn:hover {
+  box-shadow: 0 0 18px #802cb8;
+}
+
+.LoadMoreBtn:focus,
+.LoadMoreBtn:focus-visible {
+  box-shadow: 0 0 18px #802cb8;
+  outline: none;
+}
+
+.LoadMoreBtn:active {
+  color: aqua;
+  -webkit-text-stroke: 0 transparent;
 }

@@ -1,6 +1,4 @@
 .container {
-  margin-top: 64px;
-  scroll-margin-top: 48px;
 }
 
 .moviesList {
@@ -9,4 +7,6 @@
   gap: 32px;
   flex-wrap: wrap;
   list-style: none;
+  margin: 0;
+  padding-inline-start: 0;
 }

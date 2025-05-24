@@ -1,5 +1,4 @@
 import styles from './HomePage.module.css';
-import Navigation from '../../components/Navigation/Navigation';
 import MovieList from '../../components/MovieList/MovieList';
 import getFilm from '../../api';
 import { useEffect, useState } from 'react';
@@ -25,7 +24,7 @@ export default function HomePage() {
   );
   return (
     <>
-      <Navigation />
+      <h2 className={styles.head}>Trending today</h2>
       {trendMovies.length > 0 && <MovieList movies={trendMovies} />}
 
     </>

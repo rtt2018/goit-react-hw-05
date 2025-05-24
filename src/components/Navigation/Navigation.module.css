@@ -11,8 +11,8 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 24px;
-  width: 1000px;
+  padding: 0 32px;
+  width: 1200px;
   display: flex;
   align-items: center;
   gap: 28px;
@@ -26,4 +26,5 @@
   margin: 20px 0;
   color: #646cff;
   text-shadow: 0 0 18px #e9ff00;
+  -webkit-text-stroke: 1px rgb(109, 27, 177);
 }

@@ -21,7 +21,7 @@ a:hover {
 body {
   box-sizing: border-box;
   display: flex;
-  place-items: center;
+  justify-content: center;
   margin: 0;
   background: #212534;
   min-width: 320px;

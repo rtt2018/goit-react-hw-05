@@ -137,3 +137,9 @@ a {
   color: #7a6cf4;
   margin: 0 0 8px;
 }
+
+.movieIcon {
+  width: 95%;
+  height: 95%;
+  color: rgb(88 199 250 / 100%);
+}

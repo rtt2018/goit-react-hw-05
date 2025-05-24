@@ -1,3 +1,44 @@
 .container {
-  /* styles for MovieReviews */
+  display: flex;
+  justify-content: center;
+}
+
+.reviewList {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 16px 0 0;
+  padding-inline-start: 0;
+}
+
+.reviewAuthor {
+  margin: 4px 0 4px;
+  font-size: 18px;
+  color: #8c66c5;
+  font-weight: bold;
+  text-align: left;
+}
+
+.reviewContent {
+  margin: 0 0 4px;
+  padding: 0 32px;
+  font-size: 16px;
+  color: #731af8;
+  font-style: italic;
+  text-align: left;
+}
+
+.noReview {
+  margin: 16px 0 4px;
+  font-size: 16px;
+  color: #8c66c5;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.loader {
+  margin-top: 16px;
+  text-align: center;
 }
