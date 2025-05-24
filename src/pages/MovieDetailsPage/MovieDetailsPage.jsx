@@ -1,8 +1,10 @@
 import styles from './MovieDetailsPage.module.css';
 import { Outlet, useParams, NavLink, Link, useLocation } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, Suspense } from 'react';
 import getFilm from '../../api';
 import { MdOutlineArrowBackIos } from "react-icons/md";
+import { PuffLoader } from "react-spinners";
+
 
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
@@ -60,7 +62,13 @@ export default function MovieDetailsPage() {
           <hr />
         </div>
       </div>
-      <Outlet />
+      <Suspense fallback={<PuffLoader
+        color="#8c66c5"
+        cssOverride={{}}
+        className='loader' />
+      }>
+        <Outlet />
+      </Suspense>
     </div >
   );
 }
