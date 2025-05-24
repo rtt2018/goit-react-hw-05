@@ -1,5 +1,4 @@
 import styles from './MovieDetailsPage.module.css';
-import Navigation from '../../components/Navigation/Navigation';
 import { Outlet, useParams, NavLink, Link, useLocation } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import getFilm from '../../api';
@@ -9,10 +8,7 @@ export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const [filmDetail, setFilmDetail] = useState([]);
   const location = useLocation();
-  console.log("🚀 ~ MovieDetailsPage ~ location:", location)
-
   const backNav = useRef(location.state);
-  console.log("🚀 ~ MovieDetailsPage ~ backNav:", backNav)
 
   useEffect(() => {
     async function getFilmDetails(url, params) {

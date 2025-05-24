@@ -4,12 +4,10 @@ import getFilm from '../../api';
 import { useParams } from 'react-router-dom';
 import { PuffLoader } from "react-spinners";
 
-
 export default function MovieReviews() {
   const { movieId } = useParams();
   const [filmReview, setFilmReview] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
 
   useEffect(() => {
     async function getFilmDetails(url, params) {
