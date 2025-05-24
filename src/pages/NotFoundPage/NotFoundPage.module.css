@@ -14,17 +14,19 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px rgb(203, 156, 241);
   text-shadow: 0 0 5px rgb(91, 130, 214), 0 0 1px rgb(176, 101, 219);
+  transition: text-shadow 0.3s ease-in, -webkit-text-stroke 0.3s ease-in;
 }
 
 .backLink {
   display: flex;
   gap: 4px;
-  transition: text-shadow 0.2s ease-in, -webkit-text-stroke 0.3s ease-in;
+  transition: text-shadow 0.3s ease-in, -webkit-text-stroke 0.3s ease-in;
 }
 
 .backLinkSvg {
   height: 64px;
   width: 40px;
+  transition: fill 0.3s ease-in;
 }
 
 .backLink:hover,
