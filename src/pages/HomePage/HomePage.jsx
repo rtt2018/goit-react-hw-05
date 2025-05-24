@@ -12,6 +12,7 @@ export default function HomePage() {
       let result;
       try {
         result = await getFilm();
+        console.log("🚀 ~ getTrendFilm ~ result:", result)
       } catch {
         console.log('error')
       }
