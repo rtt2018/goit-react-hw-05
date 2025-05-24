@@ -1,9 +1,14 @@
 import styles from './NotFoundPage.module.css';
+import { Link } from 'react-router-dom';
+import { MdOutlineArrowBackIos } from "react-icons/md";
+
 
 export default function NotFoundPage() {
   return (
     <div className={styles.container}>
-      NotFoundPage works!
+      <Link to={'/'} className={styles.backLink}>
+        <MdOutlineArrowBackIos className={styles.backLinkSvg} /><p className={styles.desc}>404....  Йой! Шо сі стало? Тут ніц нема ))) </p>
+      </Link>
     </div>
   );
 }

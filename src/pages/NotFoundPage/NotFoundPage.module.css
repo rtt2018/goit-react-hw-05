@@ -1,3 +1,38 @@
 .container {
-  /* styles for NotFoundPage */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc {
+  margin: 0 0 16px;
+  font-size: 36px;
+  background: linear-gradient(180deg, #7a6cf4 42.79%, #646cff 74.04%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(203, 156, 241);
+  text-shadow: 0 0 5px rgb(91, 130, 214), 0 0 1px rgb(176, 101, 219);
+}
+
+.backLink {
+  display: flex;
+  gap: 4px;
+  transition: text-shadow 0.2s ease-in, -webkit-text-stroke 0.3s ease-in;
+}
+
+.backLinkSvg {
+  height: 64px;
+  width: 40px;
+}
+
+.backLink:hover,
+.backLink:hover .desc {
+  text-shadow: 0 0 18px #b88cd6;
+  -webkit-text-stroke: 1px rgb(109, 27, 177);
+}
+
+.backLink:hover .backLinkSvg {
+  fill: rgb(109, 27, 177);
 }
