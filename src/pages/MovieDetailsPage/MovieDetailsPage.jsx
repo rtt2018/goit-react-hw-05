@@ -1,18 +1,17 @@
 import styles from './MovieDetailsPage.module.css';
 import Navigation from '../../components/Navigation/Navigation';
-import { Outlet, useParams, NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, useParams, NavLink, Link, useLocation } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import getFilm from '../../api';
 import { MdOutlineArrowBackIos } from "react-icons/md";
-
 
 export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const [filmDetail, setFilmDetail] = useState([]);
   const location = useLocation();
-  // const navigate = useNavigate();
+  console.log("🚀 ~ MovieDetailsPage ~ location:", location)
 
-  const backNav = useRef(location.state?.from ?? '/');
+  const backNav = useRef(location.state);
   console.log("🚀 ~ MovieDetailsPage ~ backNav:", backNav)
 
   useEffect(() => {
@@ -32,7 +31,7 @@ export default function MovieDetailsPage() {
   return (
     <div >
       <div className={styles.container}>
-        <Link to={backNav.current} state={{ from: location }} className={styles.backLink}>
+        <Link to={backNav.current} className={styles.backLink}>
           <MdOutlineArrowBackIos className={styles.backLinkSvg} /><h2 className={styles.head}>Details</h2>
         </Link>
         <div className={styles.filmInfo}>

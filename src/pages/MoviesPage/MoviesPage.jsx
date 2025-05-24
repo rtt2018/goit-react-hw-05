@@ -21,13 +21,13 @@ export default function MoviesPage() {
 
     const searchphrase = event.target.elements.searchField.value.trim();
     const newSearchparams = new URLSearchParams(searchparams);
+    setPageNumber(1);
+    setFilmSearched([])
 
     if (searchphrase === '') {
       toast.error("Please, enter something!", { duration: 2000 })
       newSearchparams.delete('query');
     } else {
-      setPageNumber(1);
-      setFilmSearched([])
       newSearchparams.set('query', searchphrase);
     }
 

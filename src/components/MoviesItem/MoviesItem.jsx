@@ -6,7 +6,7 @@ export default function MoviesItem({ info }) {
   const location = useLocation();
   return (
     <li className={styles.container} key={info.id}>
-      <Link to={`/movies/${info.id}`} state={{ from: location }}>
+      <Link to={`/movies/${info.id}`} state={location}>
         <div className={styles.card}>
           <div className={styles.thumb}>
             <div className={styles.owerlay}>
