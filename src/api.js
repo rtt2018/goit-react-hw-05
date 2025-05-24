@@ -16,6 +16,7 @@ export default async function getFilm(fetchUrl, usrparams) {
         ...usrparams
     };
     const result = await axios.get(fetchUrl ?? url, options)
+    console.log("🚀 ~ getFilm ~ result:", result)
 
     return result;
 }
